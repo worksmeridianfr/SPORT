@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Molde';
+  src: url('/fonts/Molde-Expanded-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Suppression des barres de défilement tout en gardant le scroll actif */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Application de la police lourde et épurée sur les titres */
+h1, h2, h3, .font-heading {
+  font-family: 'Molde', 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Gestion des zones d'encoche et barres de navigation des smartphones récents */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
