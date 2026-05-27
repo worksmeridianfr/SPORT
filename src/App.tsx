@@ -74,8 +74,8 @@ export default function App() {
   const [currentFeeling, setCurrentFeeling] = useState<string>('');
 
   // Timer Effect
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
+useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
     if (isTimerRunning) {
       interval = setInterval(() => {
         setTimer((prev) => prev + 1);
